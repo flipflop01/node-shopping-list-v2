@@ -54,7 +54,7 @@ app.get('/recipes', (req, res) => {
 
 app.post("/recipes", jsonParser, (req, res) => {
   const requiredFields = ['name', 'ingredients'];
-  for (let i=0, i<requiredFields.length, i++) {
+  for (let i=0; i<requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
       let message = `Missing \`${field}\` in request body`
